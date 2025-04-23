@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIRAT HACK PROGRAMM ver4.3</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      overflow-x: hidden;
+      padding-bottom: 80px;
+    }
+
+    .top-bar {
+      background-color: #1f1f1f;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-text {
+      font-size: 18px;
+      font-weight: bold;
+      color: #28a745;
+      margin-left: 10px;
+    }
+
+    .top-bar-button {
+      margin-right: 10px;
+      background-color: #ffc107;
+      color: #121212;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .header-text {
+      font-size: 50px;
+      font-weight: bold;
+      color: #28a745;
+      text-align: center;
+      margin-top: 20px;
+      animation: blink 1s infinite alternate;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .photo-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .photo {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+      margin-top: 20px;
+    }
+
+    .signal-overlay {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 32px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      color: #39ff14;
+      text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+      animation: neon-blink 1.5s infinite alternate;
+      display: none;
+      z-index: 10;
+    }
+
+    @keyframes neon-blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+
+    .signal-note {
+      font-size: 14px;
+      font-weight: normal;
+      color: #ffc107;
+      margin-top: 10px;
+      font-family: Arial, sans-serif;
+      text-shadow: none;
+    }
+
+    #analyzeText {
+      text-align: center;
+      font-size: 22px;
+      color: #ffc107;
+      display: none;
+      margin-bottom: 80px;
+    }
+
+    .button {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: blinkButton 1s infinite alternate;
+      z-index: 100;
+    }
+
+    @keyframes blinkButton {
+      0% { background-color: #28a745; transform: scale(1); }
+      50% { background-color: #218838; transform: scale(1.05); }
+      100% { background-color: #28a745; transform: scale(1); }
+    }
+
+    .button.active { background-color: #dc3545; }
+
+    @media (max-width: 768px) {
+      .header-text { font-size: 36px; margin-top: 30px; }
+      .button { font-size: 18px; padding: 16px; }
+      .signal-overlay { font-size: 28px; padding: 15px; }
+    }
+
+    @media (max-width: 430px) {
+      .header-text { font-size: 32px; }
+      .button { font-size: 16px; padding: 14px; }
+      .signal-overlay { font-size: 24px; padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-text">📢 සංඥා ක්‍රියාත්මක වෙන්නේ මෙතැනට පමණි</div>
+    <a class="top-bar-button" href="https://affpa.top/L?tag=d_3713491m_29091c_&site=3713491&ad=29091&r=registration" target="_blank">🔗 නවතම වෙබ්අඩවිය</a>
+  </div>
+
+  <div class="header-text">VIRAT HACK PROGRAMM ver4.3</div>
+
+  <div class="photo-wrapper">
+    <img src="https://github.com/aviatorgitsrilanka/1predictkreo/blob/main/ChatGPT%20Image%2015%20апр.%202025%20г.,%2013_11_55.png?raw=true" alt="Team Aviator" class="photo">
+    <div id="signalOverlay" class="signal-overlay"></div>
+  </div>
+
+  <div id="analyzeText">Analyzing...</div>
+  <button class="button" id="getSignalButton">🔍 SIGNAL</button>
+
+  <script>
+    const getSignalButton = document.getElementById("getSignalButton");
+    const analyzeText = document.getElementById("analyzeText");
+    const signalOverlay = document.getElementById("signalOverlay");
+
+    let clickCount = 0;
+
+    getSignalButton.addEventListener("click", () => {
+      getSignalButton.classList.add("active");
+      analyzeText.style.display = "block";
+      signalOverlay.style.display = "none";
+      signalOverlay.innerHTML = "";
+
+      setTimeout(() => {
+        let signal;
+        if (clickCount % 2 === 0) {
+          signal = (Math.random() * (3 - 1) + 1).toFixed(2);
+        } else {
+          signal = "6.31";
+        }
+
+        clickCount++;
+
+        analyzeText.style.display = "none";
+        signalOverlay.style.display = "block";
+        signalOverlay.innerHTML = `
+          📈 SIGNAL: x${signal}
+          <div class='signal-note'>
+            🎯 නිරවද්‍යතාවය 75% විතරයි. වැඩි ප්‍රතිඵලයක් කැමති නම්, ඔබේ ගිණුම 5000LKR දක්වා පුරවන්න සහ ටෙලිග්‍රෑම් @virat999bot වෙත පණිවිඩයක් යවන්න.
+          </div>
+        `;
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
